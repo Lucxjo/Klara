@@ -7,8 +7,9 @@
   "author": "Ludoviko <me@ludoviko.ch>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec ts-node src/index.ts -e ts",
-    "dev": "nodemon --exec ts-node src/index.ts -e ts"
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "yarn build && node ./dist/index.js"
   },
   "dependencies": {
     "discord.js": "^13.1.0",
